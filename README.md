@@ -37,7 +37,7 @@ Comments: <br />
 All disk devices use DMA, other devices - interrupts management, no I/O polling <br />
 (S)ATA HD, ATAPI CD, SMBIOS, CPUID, FDC, FDD, ISO 9660, virtual memory (paging) - wrote fully based on official standards <br />
 (S)ATA HD, ATAPI CD, SMBIOS, CPUID - all functions are supported <br />
-
+<br />
 Advantages: <br />
 OS fully consists of C++ objects. <br />
 Easy driver development with objected collections support, easy dynamic memory access at kernel level. <br />
