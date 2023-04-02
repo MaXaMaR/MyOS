@@ -1,26 +1,26 @@
 # MyOS (only description)
 
-Характеристики операционной системы, которую я когда-то написал (до 2011).
-
-Operating system:
-Tools: NASM, MSVC
-First-level loader: 2 sectors FAT12, FAT32 using BIOS interrupts, no BIOS later
-Second-level loader: NASM bootstrapper to 32-bit protected mode & kernel & only needed drivers (storage drivers & file system drivers)
-Kernel: x86 32-bit, multithreading, I/O ports, interrupts (PIC), virtual memory (paging), IPC, timers
-IPC: spinlocks, mutexes, messages
-Device drivers: ISA DMA, PS/2 Keyboard, Teletype, PIC, FDC, FDD, (S)ATA HD, ATAPI CD
-File system drivers: FAT12, FAT16, FAT32, NTFS (open source reverse engineering docs), CDFS (ISO 9660) - read only
-BIOS drivers: SMBIOS parser, PCIBIOS parser
-Virtual drivers: CMOS parser, MBR partitions parser
-Adds: CPUID parser
-Libs: STL collections, Unicode support
-Utils: heap management
-Virtual testing environment: QEMU, Bochs, OpenBox, VmWare
-Real testing: FAT12 1.4 Mb diskette, FAT32 ATA HD partition (+ booting from NTFS partition)
-Binary files size: ~ 0.5 Mb
-Used time: 2.5 years
-
-Based on standards:
+Характеристики операционной системы, которую я когда-то написал (до 2011). <br />
+<br />
+Operating system: <br />
+Tools: NASM, MSVC <br />
+First-level loader: 2 sectors FAT12, FAT32 using BIOS interrupts, no BIOS later <br />
+Second-level loader: NASM bootstrapper to 32-bit protected mode & kernel & only needed drivers (storage drivers & file system drivers) <br />
+Kernel: x86 32-bit, multithreading, I/O ports, interrupts (PIC), virtual memory (paging), IPC, timers <br />
+IPC: spinlocks, mutexes, messages <br />
+Device drivers: ISA DMA, PS/2 Keyboard, Teletype, PIC, FDC, FDD, (S)ATA HD, ATAPI CD <br />
+File system drivers: FAT12, FAT16, FAT32, NTFS (open source reverse engineering docs), CDFS (ISO 9660) - read only <br />
+BIOS drivers: SMBIOS parser, PCIBIOS parser <br />
+Virtual drivers: CMOS parser, MBR partitions parser <br />
+Adds: CPUID parser <br />
+Libs: STL collections, Unicode support <br />
+Utils: heap management <br />
+Virtual testing environment: QEMU, Bochs, OpenBox, VmWare <br />
+Real testing: FAT12 1.4 Mb diskette, FAT32 ATA HD partition (+ booting from NTFS partition) <br />
+Binary files size: ~ 0.5 Mb <br />
+Used time: 2.5 years <br />
+<br />
+Based on standards: <br />
 1. Information Technology - AT Attachment with Packet Interface - 7 - Volume 1 (Register Delivered Command Set, Logical Register Set (ATA/ATAPI-7 V1)), Volume 2 (Parallel Transport Protocols and Physical Interconnect (ATA/ATAPI-7 V2)), Volume 3 (Serial Transport Protocols and Physical Interconnect (ATA/ATAPI-7 V3)) - American National Standard of Accredited Standards Committee INCITS.
 2. Intel® Processor Identification and the CPUID Instruction - Intel Corp.
 3. Intel® 82077AA CHMOS SINGLE-CHIP FLOPPY DISK CONTROLLER - Intel Corp.
@@ -32,13 +32,13 @@ Based on standards:
 9. System Management BIOS (SMBIOS) Reference Specification - Version 2.6.1, Version 2.7.0 - Distributed Management Task Force, Inc. (DMTF)
 10. Standard ECMA-119 2nd edition - Volume and File Structure of CDROM for Information Interchange (ISO 9660) - ECMA
 11. Modern Operating Systems Third Edition - Andrew S. Tanenbaum
+<br />
+Comments: <br />
+All disk devices use DMA, other devices - interrupts management, no I/O polling <br />
+(S)ATA HD, ATAPI CD, SMBIOS, CPUID, FDC, FDD, ISO 9660, virtual memory (paging) - wrote fully based on official standards <br />
+(S)ATA HD, ATAPI CD, SMBIOS, CPUID - all functions are supported <br />
 
-Comments:
-All disk devices use DMA, other devices - interrupts management, no I/O polling
-(S)ATA HD, ATAPI CD, SMBIOS, CPUID, FDC, FDD, ISO 9660, virtual memory (paging) - wrote fully based on official standards
-(S)ATA HD, ATAPI CD, SMBIOS, CPUID - all functions are supported
-
-Advantages:
-OS fully consists of C++ objects.
-Easy driver development with objected collections support, easy dynamic memory access at kernel level.
-Microsoft Visual Studio environment, IntelliSense support, MSVC compiler, Intel ASM syntax.
+Advantages: <br />
+OS fully consists of C++ objects. <br />
+Easy driver development with objected collections support, easy dynamic memory access at kernel level. <br />
+Microsoft Visual Studio environment, IntelliSense support, MSVC compiler, Intel ASM syntax. <br />
